@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassM-Your Personel Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">PassM</div>
+        <ul>
+            
+            <li><b>Home</b></li>
+            <li><b>About</b></li>
+            <li><b>Contact</b></li>
+        </ul>
+    </nav>
+    <div class="cointainer">
+        <h1>Password Manager</h1>
+        <p>"Welcome back! Safeguard your passwords with ease using our intuitive password management tools."</p>
+        <h2>Your Passwords</h2>
+        <table>
+            <tr>
+                <th class="content">Website</th>
+                <th class="content">Username</th>
+                <th class="content">Password</th>
+                <th class="content">Delete</th>
+            </tr>
+           
+        </table>
+        <h3>Add a Password</h3>
+        <form action="/submit" method="post">
+            
+              <label for="Website">Website </label>
+              <input type="text"  id="Website"  name="Website" required>
+              <small id="emailHelp" class="form-text text-muted"></small>
+              <br><br>
+            
+              <label for="Username">Username</label>
+              <input type="text" id="Username" name="Username" required>
+              <br><br>
+            
+              <label for="Password">Password</label>
+              <input type="text"  id="Password" name="Password" required>
+              <br>
+            
+            <button class="btn" type="Submit">Submit</button>
+          </form>
+    </div>
+   <script src="script.js"></script>
+
+</body>
+</html>

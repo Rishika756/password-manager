@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Copy Button</title>
+<style>
+    .copy-button {
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<!-- SVG Copy Button -->
+<svg class="copy-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" onclick="copyToClipboard()">
+    <path fill="none" d="M0 0h24v24H0z"/>
+    <path d="M16 1H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm-1 16H7V4h8v13zm-1-7H8v-2h6v2z"/>
+</svg>
+
+<!-- Dummy text to copy -->
+<div id="textToCopy" style="display: none;">This is the text that will be copied to the clipboard.</div>
+
+<script>
+function copyToClipboard() {
+    var text = document.getElementById("textToCopy").innerText;
+    
+    var textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    
+    alert("Text copied to clipboard: " + text);
+}
+</script>
+
+</body>
+</html>
